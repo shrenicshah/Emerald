@@ -2,7 +2,7 @@
     Mobile Menu Core Style
 */
 
-.slicknav_btn { position: fixed; ; display: block; vertical-align: middle; float: right; padding: 0.438em 0.625em 0.438em 0.625em; line-height: 1.125em; cursor: pointer; }
+.slicknav_btn { position: relative; display: block; vertical-align: middle; float: right; padding: 0.438em 0.625em 0.438em 0.625em; line-height: 1.125em; cursor: pointer; }
 .slicknav_menu  .slicknav_menutxt { display: block; line-height: 1.188em; float: left; }
 .slicknav_menu .slicknav_icon { float: left; margin: 0.188em 0 0 0.438em; }
 .slicknav_menu .slicknav_no-text { margin: 0 }
@@ -23,7 +23,7 @@
 
 
 .slicknav_menu:before{
-	float: right;
+	float: left;
 	height: 40px;
 	background: url(../images/logo.png)no-repeat;
 	width: 110px;
@@ -61,7 +61,7 @@
 .slicknav_menu {
 	background:#101010;
 	padding:5px;
-	
+	z-index: 9999
 }
 .slicknav_nav {
 	color:#fff;
@@ -71,6 +71,7 @@
 }
 .slicknav_nav, .slicknav_nav ul {
 	list-style: none;
+	overflow:hidden;
 }
 .slicknav_nav ul {
 	padding:0;
