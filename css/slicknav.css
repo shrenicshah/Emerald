@@ -23,7 +23,7 @@
 
 
 .slicknav_menu:before{
-	float: left;
+	float: right;
 	height: 40px;
 	background: url(../images/logo.png)no-repeat;
 	width: 110px;
