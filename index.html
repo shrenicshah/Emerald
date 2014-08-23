@@ -563,18 +563,49 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-9 col-xs-12 forma">
-					<form>
+<!-- 					<form>
 						<input type="text" class="col-md-6 col-xs-12 name" name='name' placeholder='Name *'/>
 						<input type="text" class="col-md-6 col-xs-12 Email" name='Email' placeholder='Email *'/>
 						<input type="text" class="col-md-12 col-xs-12 Subject" name='Subject' placeholder='Subject'/>
 						<textarea type="text" class="col-md-12 col-xs-12 Message" name='Message' placeholder='Message *'></textarea>
 						<div class="cBtn col-xs-12">
 							<ul>
-								<li class="clear"><a href="#"><i class="fa fa-times"></i>clear form</a></li>
 								<li class="send"><a href="#"><i class="fa fa-share"></i>Send Message</a></li>
 							</ul>
 						</div>
-					</form>
+					</form> -->
+
+          <form name="sentMessage" class="well" id="contactForm"  novalidate>
+	       <legend>Contact me</legend>
+		 <div class="control-group">
+                    <div class="controls">
+			<input type="text" class="form-control" 
+			   	   placeholder="Full Name" id="name" required
+			           data-validation-required-message="Please enter your name" />
+			  <p class="help-block"></p>
+		   </div>
+	         </div> 	
+                <div class="control-group">
+                  <div class="controls">
+			<input type="email" class="form-control" placeholder="Email" 
+			   	            id="email" required
+			   		   data-validation-required-message="Please enter your email" />
+		</div>
+	    </div> 	
+			  
+               <div class="control-group">
+                 <div class="controls">
+				 <textarea rows="10" cols="100" class="form-control" 
+                       placeholder="Message" id="message" required
+		       data-validation-required-message="Please enter your message" minlength="5" 
+                       data-validation-minlength-message="Min 5 characters" 
+                        maxlength="999" style="resize:none"></textarea>
+		</div>
+               </div> 		 
+	     <div id="success"> </div> <!-- For success/fail messages -->
+	    <button type="submit" class="btn btn-primary pull-right">Send</button><br />
+          </form>
+					
 				</div>
 				<div class="col-md-3 col-xs-12 cont">
 					<ul>
@@ -627,6 +658,9 @@
 	<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.slicknav.js"></script>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+ 	<script src="js/jqBootstrapValidation.js"></script>
+ 	<script src="js/contact_me.js"></script>
 	<script>
 			$(document).ready(function(){
 			$(".bhide").click(function(){
